@@ -12,7 +12,7 @@ export class CardsComponent implements OnInit {
 
   constructor() { }
 
-  filterByType = (type: string) => this.transactions.filter((transaction: Transaction) => transaction.type === type)
+  filterByType = (type: string) => this.transactions.filter((transaction: Transaction) => transaction.type === type);
 
   ngOnInit(): void {
   }
