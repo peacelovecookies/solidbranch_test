@@ -1,2 +1,2 @@
 deploy:
-	git push -u origin master && npm run deploy
+	git push -u origin main && npm run deploy
