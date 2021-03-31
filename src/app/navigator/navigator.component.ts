@@ -25,7 +25,7 @@ export class NavigatorComponent extends CardsComponent implements OnInit {
     return `${first} ${last}`;
   }
 
-  getAmount = (transaction: Transaction) => 1000; // #TODO: find out what it should be returned here
+  getAmount = (transaction: Transaction) => Math.floor(Math.random() * 1000); // #TODO: find out what it should be returned here
 
   filterByType = (type: string) => this.transactions
     .filter((transaction: Transaction) => transaction.type === type || transaction.type === type.slice(0, -1))
