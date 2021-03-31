@@ -1,16 +1,18 @@
-<ul class="nav nav-tabs">
-  <li class="nav-item" *ngFor="let tab of tabs">
+<button type="button" class="btn btn-link mb-4" routerLink="/">Back</button>
+
+<nav class="nav nav-tabs nav-fill" id="transactionsTab" role="tablist">
+  <li class="nav-item border-bottom" *ngFor="let tab of tabs">
     <a class="nav-link{{isActive(tab) ? ' active' : ''}}" data-toggle="tab" href="/navigator?tab={{tabs.indexOf(tab)}}">{{tab[0].toUpperCase() + tab.slice(1)}}</a>
   </li>
-</ul>
+</nav>
 
 <div class="tab-content" *ngFor="let tab of tabs">
   <div class="tab-pane fade{{isActive(tab) ? ' show active' : ''}}" id={{tab}}>
-    <ul class="list-unstyled row">
-      <li class="list-item col-6 border-top">Name</li>
-      <li class="list-item col-6 border-top">Amount</li>
+    <ul class="list-unstyled row mt-5 text-center">
+      <li class="list-item col-6">Name</li>
+      <li class="list-item col-6">Amount</li>
     </ul>
-    <ul class="list-unstyled row" *ngFor="let transaction of filterByType(tab)">
+    <ul class="list-unstyled row text-center" *ngFor="let transaction of filterByType(tab)">
       <li class="list-item col-6 border-top">{{getFullName(transaction)}}</li>
       <li class="list-item col-6 border-top">{{getAmount(transaction)}}</li>
     </ul>
