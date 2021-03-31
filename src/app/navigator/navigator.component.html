@@ -6,6 +6,13 @@
 
 <div class="tab-content" *ngFor="let tab of tabs">
   <div class="tab-pane fade{{isActive(tab) ? ' show active' : ''}}" id={{tab}}>
-    {{tab}} list
+    <ul class="list-unstyled row">
+      <li class="list-item col-6 border-top">Name</li>
+      <li class="list-item col-6 border-top">Amount</li>
+    </ul>
+    <ul class="list-unstyled row" *ngFor="let transaction of filterByType(tab)">
+      <li class="list-item col-6 border-top">{{getFullName(transaction)}}</li>
+      <li class="list-item col-6 border-top">{{getAmount(transaction)}}</li>
+    </ul>
   </div>
 </div>
