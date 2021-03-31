@@ -1,6 +1,7 @@
 {
   "name": "solidbranch_test",
   "version": "0.0.0",
+  "private": "false",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
