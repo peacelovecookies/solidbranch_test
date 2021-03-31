@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TRANSACTIONS } from '../data';
-import { Transaction } from '../Transaction';
+import { Transaction } from '../entities/Transaction';
 
 @Component({
   selector: 'app-cards',
