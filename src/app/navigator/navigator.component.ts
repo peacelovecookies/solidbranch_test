@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-navigator',
@@ -6,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigator.component.scss']
 })
 export class NavigatorComponent implements OnInit {
+  tabs: string[] = ['income', 'outcome', 'loans', 'investments'];
+  tabIndex: string;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) {
+    this.tabIndex = this.route.snapshot.queryParams.tab;
+  }
+
+  isActive = (tabType: string) => tabType === this.tabs[+this.tabIndex];
 
   ngOnInit(): void {
   }
