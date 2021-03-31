@@ -5,7 +5,7 @@
         <div class="card-body">
           <h5 class="card-title">{{filterByType('income').length}}</h5>
           <p class="card-text">Income</p>
-          <a href="/navigator?tab=0" class="btn btn-primary float-right">See all</a>
+          <a [routerLink]="['/navigator']" [queryParams]="{'tab': 0}" class="btn btn-primary float-right">See all</a>
         </div>
       </div>
     </div>
@@ -15,7 +15,7 @@
         <div class="card-body">
           <h5 class="card-title">{{filterByType('investment').length}}</h5>
           <p class="card-text">Investments</p>
-          <a href="/navigator?tab=1" class="btn btn-primary float-right">See all</a>
+          <a [routerLink]="['/navigator']" [queryParams]="{'tab': 1}" class="btn btn-primary float-right">See all</a>
         </div>
       </div>
     </div>
@@ -27,7 +27,7 @@
         <div class="card-body">
           <h5 class="card-title">{{filterByType('outcome').length}}</h5>
           <p class="card-text">Outcome</p>
-          <a href="/navigator?tab=2" class="btn btn-primary float-right">See all</a>
+          <a [routerLink]="['/navigator']" [queryParams]="{'tab': 2}" class="btn btn-primary float-right">See all</a>
         </div>
       </div>
     </div>
@@ -37,7 +37,7 @@
         <div class="card-body">
           <h5 class="card-title">{{filterByType('loan').length}}</h5>
           <p class="card-text">Loans</p>
-          <a href="/navigator?tab=3" class="btn btn-primary float-right">See All</a>
+          <a [routerLink]="['/navigator']" [queryParams]="{'tab': 3}" class="btn btn-primary float-right">See All</a>
         </div>
       </div>
     </div>
